@@ -256,3 +256,114 @@ print("list_17:", list_17)
 list_18 = [100, 50, 65, 82, 23]
 list_18.sort(reverse = True)
 print("list_18:",list_18)
+
+# Customize Sort Function
+# You can also customize your own function by using the 
+# keyword argument key = function.
+
+# The function will return a number that will be used 
+# to sort the list (the lowest number first):
+
+# Sort the list based on how close the number is to 50:
+list_19 = [100, 50, 65, 82, 23]
+def myfunc(n):
+  return abs(n - 50)
+
+list_19.sort(key = myfunc)
+print(list_19)
+
+# Case Insensitive Sort
+# By default the sort() method is case sensitive, resulting 
+# in all capital letters being sorted before lower case letters:
+
+# Case sensitive sorting can give an unexpected result:
+list_20 = ["banana", "Orange", "Kiwi", "cherry"]
+list_20.sort()
+print(list_20) # ['Kiwi', 'Orange', 'banana', 'cherry']
+
+# Luckily we can use built-in functions 
+# as key functions when sorting a list.
+# So if you want a case-insensitive sort function, 
+# use str.lower as a key function:
+
+# Perform a case-insensitive sort of the list:
+list_21 = ["banana", "Orange", "Kiwi", "cherry"]
+list_21.sort(key = str.lower)
+print("list_21: " , list_21)
+
+# Reverse Order
+# What if you want to reverse the order of a list, 
+# regardless of the alphabet?
+
+# The reverse() method reverses the current 
+# sorting order of the elements.
+
+# Reverse the order of the list items:
+list_22 = ["banana", "Orange", "Kiwi", "cherry"]
+list_22.reverse()
+print("list_22: ", list_22) #  ['cherry', 'Kiwi', 'Orange', 'banana']
+
+# Copy Lists
+# You cannot copy a list simply by 
+# typing list2 = list1, because: list2 will only be a reference to list1, 
+# and changes made in list1 will automatically also be made in list2.
+
+# There are ways to make a copy, one way is to use the built-in 
+# List method copy().
+
+# Make a copy of a list with the copy() method:
+list_23 = ["apple", "banana", "cherry"]
+my_list_copy = list_23.copy()
+print("my_list_copy: ", my_list_copy)
+
+# Join Two Lists
+# There are several ways to join, or concatenate, 
+# two or more lists in Python.
+
+# One of the easiest ways are by using the + operator.
+
+# Join two list:
+list_24 = ["a", "b", "c"]
+list_25 = [1, 2, 3]
+
+list_26 = list_24 + list_25
+print("list_26: ", list_26)
+
+# Another way to join two lists is by appending all 
+# the items from list2 into list1, one by one:
+
+# Append list_27 into list_28:
+list_27 = ["a", "b", "c"]
+list_28 = [1, 2, 3]
+
+for x in list_28: 
+  list_27.append(x)
+
+print("list_27: ", list_27) # ['a', 'b', 'c', 1, 2, 3]
+
+# Or you can use the extend() method, which purpose is 
+# to add elements from one list to another list:
+
+# Use the extend() method to add list2 at the end of list1:
+list_29 = ["a", "b" , "c"]
+list_30 = [1, 2, 3]
+
+list_29.extend(list_30)
+print("list_29: ", list_29) # ['a', 'b', 'c', 1, 2, 3]
+
+# append()	Adds an element at the end of the list
+# clear()	Removes all the elements from the list
+# copy()	Returns a copy of the list
+# count()	Returns the number of elements with the specified value
+# extend()	Add the elements of a list (or any iterable), to the end of the current list
+# index()	Returns the index of the first element with the specified value
+# insert()	Adds an element at the specified position
+# pop()	Removes the element at the specified position
+# remove()	Removes the item with the specified value
+# reverse()	Reverses the order of the list
+# sort()	Sorts the list
+
+
+
+
+
