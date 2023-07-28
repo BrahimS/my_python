@@ -285,7 +285,7 @@ family_2 = {
   "child2" : child2,
   "child3" : child3
 }
-print('family_2: ', family_2);
+print('family_2: ', family_2) #  {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
 
 # Access Items in Nested Dictionaries
 # To access items from a nested dictionary, you use the name of the dictionaries, 
